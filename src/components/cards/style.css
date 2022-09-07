@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+.orange {
+  color: white;
+}
+.orange .card-left {
+  background-color: rgb(240, 103, 65);
+}
+
+.green {
+  color: #325C46;
+}
+.green .card-left {
+  background-color: #92bCa6;
+}
+
+.card {
+  margin: 50px auto;
+  width: 450px;
+  height: 250px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 1px 1px 15px gray;
+}
+.card:hover .card-left {
+  width: 450px;
+}
+.card .card-left {
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  transition: width 0.45s;
+}
+.card .card-left .user-icon {
+  width: 150px;
+  flex-wrap: wrap;
+  padding: 0.83em 0;
+  text-align: center;
+  font-size: 11pt;
+}
+.card .card-left .user-icon .level span, .card .card-left .user-icon .points span {
+  padding: 5px 15px;
+  background-color: rgba(102, 102, 102, 0.3);
+  border-radius: 15px;
+}
+.card .card-left .user-icon img {
+  margin: 10px 0;
+  border-radius: 100%;
+  border: 2px solid lightgray;
+}
+.card .card-left .user-icon div {
+  margin: 15px 0;
+}
+.card .card-left .user-info {
+  position: absolute;
+  left: 150px;
+  width: 300px;
+  height: 100%;
+  flex-wrap: wrap;
+  border-left: 1px solid lightgray;
+}
+.card .card-left .user-info .personal-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card .card-left .user-info .personal-info p {
+  width: 120px;
+  margin: 5px 10px;
+  font-size: 11pt;
+}
+.card .card-left .user-info .award-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.card .card-left .user-info .award-info .award-item {
+  width: 25%;
+}
+.card .card-left .user-info .award-info .award-item span {
+  display: block;
+  text-align: center;
+  margin: 15px 0;
+}
+.card .card-left .user-info .award-info .award-item .cup-icon::before {
+  content: "\f091";
+}
+.card .card-left .user-info .award-info .award-item .game-icon::before {
+  content: "\f11b";
+}
+.card .card-left .user-info .award-info .award-item .people-icon::before {
+  content: "\f0c0";
+}
+.card .card-left .user-info .award-info .award-item .coffee-icon::before {
+  content: "\f0f4";
+}
+.card .card-right {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  background-color: white;
+  color: gray;
+}
+.card .card-right .description {
+  padding: 0 15px;
+}
+.card h2 {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

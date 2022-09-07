@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+}
+
+.orange{
+    color: white;
+    .card-left{
+        background-color: rgb(240, 103, 65);
+    }
+}
+
+.green{
+    color: #325C46;
+    .card-left{
+        background-color: #92bCa6;
+    }
+}
+
+.card{
+    margin: 50px auto;
+    width: 450px ;
+    height: 250px;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 1px 1px 15px gray;
+    &:hover{
+        .card-left{
+            width: 450px;
+        }
+    }
+    .card-left{
+        width: 150px;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        position: absolute;
+        overflow: hidden;
+        transition: width 0.45s;        
+        .user-icon{
+            width: 150px;
+            flex-wrap: wrap;
+            padding: 0.83em 0;
+            text-align: center;
+            font-size: 11pt;
+
+            .level span , .points span{
+                padding: 5px 15px;
+                background-color: rgba(102, 102, 102, 0.3);
+                border-radius: 15px;
+            }
+            img{
+                margin: 10px 0;
+                border-radius: 100%;
+                border: 2px solid lightgray;
+            }
+            div {
+                margin: 15px 0;
+            }
+        }
+        .user-info{
+            position: absolute;
+            left: 150px;
+            width: 300px;
+            height: 100%;
+            flex-wrap: wrap;
+            border-left: 1px solid lightgray;
+            .personal-info{
+                display: flex;
+                flex-wrap: wrap;
+                p{
+                    width: 120px;
+                    margin: 5px 10px;
+                    font-size: 11pt;
+                }
+            }
+            .award-info{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 40px;
+                .award-item{
+                    width: 25%;
+                    span{
+                        display: block;
+                        text-align: center;
+                        margin: 15px 0;
+                    }
+                    .cup-icon::before{
+                        content: "\f091";
+                    } 
+                    .game-icon::before{
+                        content: "\f11b";
+                    }   
+                    .people-icon::before{
+                        content: "\f0c0";
+                    }   
+                    .coffee-icon::before{
+                        content: "\f0f4";
+                    }          
+                }
+            }
+            
+        }
+    }
+    .card-right{
+        width: 300px;
+        height: 100%;
+        position:absolute;
+        z-index: 1;
+        right: 0;
+        top: 0;
+        background-color: white;
+        color: gray;
+
+        
+        .description{
+            padding:0 15px;
+        }
+    }
+    h2{
+        text-align: center;
+    }
+}
